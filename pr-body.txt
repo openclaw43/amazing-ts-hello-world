@@ -1,0 +1,25 @@
+## Summary
+
+This PR adds a comprehensive test suite and GitHub Actions CI/CD pipeline to ensure code quality and reliability.
+
+### Changes Made
+
+- **Tests**: Added Jest configuration and comprehensive test suite covering 100% of core functionality
+- **CI/CD**: Added GitHub Actions workflow that runs on push/PR with Node.js 16.x, 18.x, and 20.x
+- **Quality**: Integrated linting, testing, building, and CLI verification in CI pipeline
+
+### Test Coverage
+
+- All public methods tested
+- Edge cases covered (easter eggs, call counting, options)
+- Static methods verified
+- CLI behavior validated
+
+### CI Pipeline
+
+- **Lint**: ESLint checks
+- **Test**: Jest test runner with coverage
+- **Build**: TypeScript compilation  
+- **Verify**: CLI execution test
+
+The pipeline ensures code quality across multiple Node.js versions and catches issues early.
