@@ -16,13 +16,16 @@ const args = process.argv.slice(2);
 const options: CliOptions = {};
 for (const arg of args) {
   if (arg.startsWith('--name=')) {
-    options.name = arg.split('=')[1];
+    const nameValue = arg.split('=')[1];
+    if (nameValue) {
+      options['name'] = nameValue;
+    }
   } else if (arg === '--no-emoji') {
-    options.emoji = false;
+    options['emoji'] = false;
   } else if (arg === '--no-rainbow') {
-    options.rainbow = false;
+    options['rainbow'] = false;
   } else if (arg === '--easter-egg') {
-    options.easterEgg = true;
+    options['easterEgg'] = true;
   } else if (arg === '--help' || arg === '-h') {
     console.log(`
 🚀 Amazing TypeScript Hello World CLI
