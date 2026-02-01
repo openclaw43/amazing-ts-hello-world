@@ -2,11 +2,18 @@
 
 import AmazingHelloWorld from './AmazingHelloWorld';
 
+interface CliOptions {
+  name?: string;
+  emoji?: boolean;
+  rainbow?: boolean;
+  easterEgg?: boolean;
+}
+
 const cli = new AmazingHelloWorld();
 const args = process.argv.slice(2);
 
 // Parse CLI arguments
-const options: Record<string, any> = {};
+const options: CliOptions = {};
 for (const arg of args) {
   if (arg.startsWith('--name=')) {
     options.name = arg.split('=')[1];
