@@ -42,7 +42,7 @@ export class AmazingHelloWorld {
     this.callCount++;
     
     const config = {
-      name: options.name || process.env.HELLO_NAME || 'World',
+      name: options.name || process.env['HELLO_NAME'] || 'World',
       gradient: options.gradient || 'rainbow',
       rainbow: options.rainbow ?? true,
       emoji: options.emoji ?? true,

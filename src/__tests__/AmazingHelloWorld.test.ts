@@ -1,4 +1,4 @@
-import AmazingHelloWorld, { HelloOptions } from '../AmazingHelloWorld';
+import AmazingHelloWorld from '../AmazingHelloWorld';
 
 describe('AmazingHelloWorld', () => {
   let greeter: AmazingHelloWorld;
