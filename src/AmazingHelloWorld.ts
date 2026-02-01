@@ -27,6 +27,14 @@ const EASTER_EGG_MESSAGES = [
   "🎉 Party mode: ACTIVATED!",
 ];
 
+export interface HelloOptions {
+  name?: string;
+  gradient?: keyof typeof gradient;
+  rainbow?: boolean;
+  emoji?: boolean;
+  easterEgg?: boolean;
+}
+
 export class AmazingHelloWorld {
   private callCount = 0;
 
